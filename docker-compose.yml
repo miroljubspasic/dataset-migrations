@@ -1,0 +1,16 @@
+version: "3"
+services:
+  migrate.app:
+    container_name: app
+    build: ./app/
+    tty: true
+    volumes:
+      - './app/:/app'
+      - './database/:/database'
+      - './results/:/results'
+  migrate.db:
+    container_name: db
+    build: ./database/
+    tty: true
+    volumes:
+      - './database/:/database'
