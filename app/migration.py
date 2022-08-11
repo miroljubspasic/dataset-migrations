@@ -10,9 +10,9 @@ def cli():
 @cli.command(context_settings={"ignore_unknown_options": True})
 @click.option('--type',
               type=click.Choice(['customers', 'orders', 'giftcards', 'sor_subscriptions', 'sor_orders']))
-def start(datatype):
+def start(type):
     """Download data from API endpoint."""
-    if datatype is None:
+    if type is None:
         click.echo("Try 'migration start --help' for help")
         exit()
     click.echo('Continue? [yn] ', nl=False)
@@ -20,9 +20,9 @@ def start(datatype):
     click.echo()
     if c == 'y':
         click.echo('We will go on')
-        click.echo(click.style(f'Start fetch data for {datatype} endpoint', bg="green"))
+        click.echo(click.style(f'Start fetch data for {type} endpoint', bg="green"))
         module = __import__('dataset')
-        class_name = datatype.replace("_", " ").title().replace(" ", "")
+        class_name = type.replace("_", " ").title().replace(" ", "")
         class_ = getattr(module, class_name)
         job = class_()
         jobStatus = job.init_job()
