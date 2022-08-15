@@ -13,7 +13,7 @@ def cli():
 def start(type):
     """Download data from API endpoint."""
     if type is None:
-        click.echo("Try 'migration start --help' for help")
+        click.echo("Try 'dataset start --help' for help")
         exit()
     click.echo('Start? [yn] ', nl=False)
     c = click.getchar()
