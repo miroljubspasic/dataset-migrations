@@ -10,6 +10,7 @@
 - Clone git repo → `git clone https://github.com/miroljubspasic/dataset-migrations.git`
 - Navigate to `dataset-migration/app` folder and duplicate **.env.example** file
 - Rename one of these files to just “**.env**” (it will become hidden file by system defaults)
+- **Important**, don't move/remove or edit the .env.example file
 - If necessary, change your folder view options in order to see **.env** file again
 - Overwrite new **.env** file with the received one (sensitive data file!!!)
 
@@ -50,6 +51,7 @@ Result layout contains a folder (job_ID) with original files and **.zip** file w
 - Clone git repo → `git clone https://github.com/miroljubspasic/dataset-migrations.git`
 - Navigate to `dataset-migration/app` folder and duplicate **.env.example** file
 - Rename one of these files to just “**.env**” (it will become hidden file by system defaults)
+- **Important**, don't move/remove or edit the .env.example file
 - Overwrite new **.env** file with the received one (sensitive data file!!!)
 - Open terminal/command line and navigate to `dataset-migration/app` folder
 - `pip install --editable .`
