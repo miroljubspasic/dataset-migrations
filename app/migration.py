@@ -15,7 +15,7 @@ def start(type):
     if type is None:
         click.echo("Try 'migration start --help' for help")
         exit()
-    click.echo('Continue? [yn] ', nl=False)
+    click.echo('Start? [yn] ', nl=False)
     c = click.getchar()
     click.echo()
     if c == 'y':
